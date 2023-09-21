@@ -1,3 +1,4 @@
+//declarative
 pipeline {
 	agent any
 	stages{
@@ -16,6 +17,17 @@ pipeline {
 			steps {
 				echo "Deploy"
 			}
+		}
+	}
+	post{
+		always {
+			echo "i am awesome"
+		}
+		success {
+			echo "i was success when you are success"
+		}
+		failure {
+			echo "i was failure when you are failed"
 		}
 	}
 }
