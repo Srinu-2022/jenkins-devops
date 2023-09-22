@@ -27,7 +27,8 @@ pipeline {
 		}
 		stage ('Compile') {
 			steps {
-				sh "mvn -f .../currency-exchange-microservice/pom.xml clean compile"
+				sh "mvn -f currency-exchange-microservice/pom.xml clean compile"
+				
 			}
 		}
 		stage('Test'){
